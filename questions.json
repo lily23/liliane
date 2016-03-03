@@ -1,0 +1,14 @@
+[
+    {
+    	"text": "What does DOM stand for?"
+    }, 
+    {
+	    "text": "What is an object?"
+    }, 
+    {
+	    "text": "What does MVC stand for?"
+    },
+    {
+	    "text": "What does $scope do in angularJS?"
+    }
+]

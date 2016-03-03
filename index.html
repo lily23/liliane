@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app='myModule'>
+
+<head>
+    <title>Class Assignment</title>
+</head>
+
+<body>
+
+    <div ng-controller="myController">
+        <br />
+        <br />
+        <strong>Please click the button below to pick a randon question for a randon student</strong>
+        <br />
+        <br />
+        <input type="button" value="Click to pick random questions for each student" ng-click="getName()"> 
+        
+        <br />
+        <br />
+        
+       <table border="1" width="70%" >
+            
+            <tr>
+                <th>Name</th>
+                <th>Question</th>
+                <th>Answer</th>
+                <th>Answered Correct</th>
+                <th>Point's Earned</th>
+                <th>Score</th>
+            </tr>
+            <tr ng-repeat="studentInfo in studentArray">
+                <td>{{studentInfo.nameAnswered}}</td>
+                <td>{{studentInfo.questionAsked}}</td>
+                <td>{{studentInfo.studentAnswer}}</td>
+                <td id={{studentInfo.nameAnswered}} onClick="reply_click(this.id)"><a href="#">Click to add point</a></td>
+                <td class={{studentInfo.nameAnswered}}>0</td>
+            </tr>
+        </table>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
